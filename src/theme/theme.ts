@@ -4,6 +4,9 @@ const theme = extendTheme({
   colors: {
     brand: {
       bg: "#070623",
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "repeat",
       primary: "#0a5c66",
       secondary: "#0a1a49",
       "secondary-accent": "#19487e",
@@ -17,6 +20,8 @@ const theme = extendTheme({
     global: {
       body: {
         bgColor: "brand.bg",
+        bgImage: "url('/assets/constelation.svg') !important",
+
         color: "brand.100",
       },
     },
