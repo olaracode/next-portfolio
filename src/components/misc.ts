@@ -13,3 +13,13 @@ export const Container = chakra("div", {
     px: 6,
   },
 });
+
+export const BlurCard = chakra("div", {
+  baseStyle: {
+    position: "relative",
+    zIndex: "12",
+    backgroundColor: "rgba(1,1,1,0.2)",
+    backdropFilter: "blur(3px)",
+    p: 10,
+  },
+});

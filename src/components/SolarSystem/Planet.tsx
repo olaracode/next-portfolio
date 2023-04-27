@@ -40,6 +40,7 @@ export type PlanetT = {
   planetColor?: string;
   delay?: number;
   stop?: boolean;
+  saturn?: boolean;
 };
 const Circle = ({
   size = "300px",
@@ -49,6 +50,7 @@ const Circle = ({
   planetColor = "brand.white",
   delay = 0,
   stop = false,
+  saturn = true,
 }: PlanetT) => {
   const position = parseInt(planetSize.replace("px", "")) / 2;
   return (

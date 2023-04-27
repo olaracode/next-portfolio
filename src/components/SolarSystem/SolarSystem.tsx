@@ -3,13 +3,12 @@ import React from "react";
 import { Box, Flex, Circle as ChakraCircle } from "@chakra-ui/react";
 import Planet from "./Planet";
 import planets from "@/lib/Planets";
-
 const SolarSystem = () => {
   const [stop, setStop] = React.useState(false);
   const toggleStop = () => setStop(!stop);
   return (
     <Flex
-      position="fixed"
+      position="absolute"
       alignItems={"center"}
       justifyContent="center"
       top={"0px"}
