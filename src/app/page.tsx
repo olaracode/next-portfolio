@@ -5,6 +5,7 @@ export default function Home() {
     <main>
       <Header />
       <SolarSystem />
+      <p>Hola</p>
     </main>
   );
 }

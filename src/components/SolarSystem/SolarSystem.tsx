@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Box, Flex, Circle as ChakraCircle } from "@chakra-ui/react";
-import Planet, { PlanetT } from "./Planet";
+import Planet from "./Planet";
 import planets from "@/lib/Planets";
 
 const SolarSystem = () => {
@@ -9,14 +9,14 @@ const SolarSystem = () => {
   const toggleStop = () => setStop(!stop);
   return (
     <Flex
-      position="absolute"
+      position="fixed"
       alignItems={"center"}
       justifyContent="center"
-      top={0}
+      top={"0px"}
       height="100vh"
       width="100%"
       maxW="100%"
-      overflowX="hidden"
+      overflow="hidden"
     >
       <Box position="absolute" zIndex="10">
         <ChakraCircle
