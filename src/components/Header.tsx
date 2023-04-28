@@ -5,7 +5,7 @@ import Links from "./Links";
 import useScroll from "@/hooks/useScroll";
 
 const Header = () => {
-  const { scrolled100px, scrollToId } = useScroll();
+  const { scrolled100px } = useScroll();
 
   return (
     <Box
@@ -26,7 +26,7 @@ const Header = () => {
           transition="opacity 0.3s ease-out"
         >
           <Heading fontSize="48px">Octavio Lara</Heading>
-          <Heading variant="h2" fontSize="24px">
+          <Heading variant="h2" fontSize="24px" mb={10}>
             Desarrollador web
           </Heading>
           <Links variant="responsive" />

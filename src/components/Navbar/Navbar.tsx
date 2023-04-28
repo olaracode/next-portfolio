@@ -52,6 +52,7 @@ const Navbar = () => {
           position="relative"
           w="100%"
           zIndex="10"
+          display={{ base: "block", md: "none" }}
           sx={isOpen ? variants.slideIn : variants.slideOut}
         >
           <Container display="flex" justifyContent="flex-end">
