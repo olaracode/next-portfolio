@@ -20,11 +20,11 @@ const GoTop = () => {
     <Box
       position="fixed"
       bottom="5"
-      right="5"
+      w="100%"
       zIndex="20"
       sx={scrolled100px ? variants.slideIn : variants.slideOut}
     >
-      <Container>
+      <Container w="100%" display="flex" justifyContent="end">
         <Button gap={1} alignItems="center" onClick={() => scrollToId("top")}>
           Inicio
           <Image

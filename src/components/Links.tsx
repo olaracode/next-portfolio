@@ -26,7 +26,11 @@ const Links = ({ variant }: { variant: LinksVariantT }) => {
       >
         Sobre mí
       </Link>
-      <Link fontSize="18px" fontWeight="bold">
+      <Link
+        fontSize="18px"
+        fontWeight="bold"
+        onClick={() => scrollToId("experiences")}
+      >
         Experiencia
       </Link>
       <Link fontSize="18px" fontWeight="bold">

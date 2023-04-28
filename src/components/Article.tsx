@@ -2,7 +2,13 @@
 import { Container, BlurCard, Article as ArticleWraper } from "./misc";
 import ReactMarkdown from "react-markdown";
 
-const Article = ({ content }: { content: string }) => {
+const Article = ({
+  content,
+  Stack,
+}: {
+  content: string;
+  Stack?: React.ReactNode;
+}) => {
   return (
     <>
       <Container mb={10} id={"about"}>
@@ -10,6 +16,7 @@ const Article = ({ content }: { content: string }) => {
           <ArticleWraper>
             <ReactMarkdown>{content}</ReactMarkdown>
           </ArticleWraper>
+          {Stack && Stack}
         </BlurCard>
       </Container>
     </>

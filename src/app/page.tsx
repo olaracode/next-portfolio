@@ -3,7 +3,10 @@ import Header from "@/components/Header";
 import Article from "@/components/Article";
 import Navbar from "@/components/Navbar/Navbar";
 import GoTop from "@/components/GoTop";
-import { about } from "@/lib/About";
+import TechStack from "@/components/TechStack";
+import { about, stack } from "@/lib/About";
+import Experiences from "@/components/Experiences";
+import AsteroidBelt from "@/components/SolarSystem/AsteroidBelt";
 export default function Home() {
   return (
     <main>
@@ -11,7 +14,12 @@ export default function Home() {
       <Navbar />
       <Header />
       <SolarSystem />
-      <Article content={about} />
+      <Article
+        content={about}
+        Stack={<TechStack title="Stack" stack={stack} />}
+      />
+      <AsteroidBelt />
+      <Experiences />
       <GoTop />
     </main>
   );
