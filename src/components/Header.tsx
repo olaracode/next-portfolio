@@ -1,6 +1,7 @@
 "use client";
 import { Heading, Link, Box, Stack, StackDivider } from "@chakra-ui/react";
 import { Container, BlurCard } from "./misc";
+import Links from "./Links";
 import useScroll from "@/hooks/useScroll";
 
 const Header = () => {
@@ -28,26 +29,7 @@ const Header = () => {
           <Heading variant="h2" fontSize="24px">
             Desarrollador web
           </Heading>
-          <Stack
-            divider={<StackDivider />}
-            my={2}
-            textAlign={"center"}
-            direction={{ base: "column", md: "row" }}
-          >
-            <Link
-              onClick={() => scrollToId("about")}
-              fontSize="18px"
-              fontWeight="bold"
-            >
-              Sobre mí
-            </Link>
-            <Link fontSize="18px" fontWeight="bold">
-              Experiencia
-            </Link>
-            <Link fontSize="18px" fontWeight="bold">
-              Contacto
-            </Link>
-          </Stack>
+          <Links variant="responsive" />
         </BlurCard>
       </Container>
     </Box>

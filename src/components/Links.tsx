@@ -1,8 +1,9 @@
 import React from "react";
-import { Stack, StackDivider, Link } from "@chakra-ui/react";
+import { Stack, StackDivider, Link, StackDirection } from "@chakra-ui/react";
 import useScroll from "@/hooks/useScroll";
 
-const variants = {
+type variantsT = "responsive" | "nav" | "menu";
+const variants: { [key in variantsT]: StackDirection } = {
   responsive: { base: "column", md: "row" },
   nav: "row",
   menu: "column",
@@ -13,7 +14,11 @@ export type LinksVariantT = keyof typeof variants;
 const Links = ({ variant }: { variant: LinksVariantT }) => {
   const { scrollToId } = useScroll();
   return (
-    <Stack divider={<StackDivider />} textAlign={"center"} direction={"column"}>
+    <Stack
+      divider={<StackDivider />}
+      textAlign={"center"}
+      direction={variants[variant]}
+    >
       <Link
         onClick={() => scrollToId("about")}
         fontSize="18px"
