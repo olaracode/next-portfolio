@@ -1,9 +1,11 @@
 "use client";
-import React from "react";
 import { Heading, Link, Box, Stack, StackDivider } from "@chakra-ui/react";
-import NextLink from "next/link";
-import { Container } from "./misc";
+import { Container, BlurCard } from "./misc";
+import useScroll from "@/hooks/useScroll";
+
 const Header = () => {
+  const { scrolled100px, handleScrollToAboutMe } = useScroll();
+
   return (
     <Box
       zIndex={"12"}
@@ -13,18 +15,14 @@ const Header = () => {
       alignItems="center"
     >
       <Container>
-        <Box
+        <BlurCard
           display="flex"
           justifyContent="center"
           alignItems="center"
           flexDir="column"
-          position="relative"
-          zIndex="12"
-          sx={{
-            backgroundColor: "rgba(1,1,1,0.2)",
-            backdropFilter: "blur(3px)",
-          }}
-          p={10}
+          textAlign="center"
+          opacity={scrolled100px ? "0" : "1"}
+          transition="opacity 0.3s ease-out"
         >
           <Heading fontSize="48px">Octavio Lara</Heading>
           <Heading variant="h2" fontSize="24px">
@@ -36,7 +34,11 @@ const Header = () => {
             textAlign={"center"}
             direction={{ base: "column", md: "row" }}
           >
-            <Link as={NextLink} href={"#"} fontSize="18px" fontWeight="bold">
+            <Link
+              onClick={() => handleScrollToAboutMe("about")}
+              fontSize="18px"
+              fontWeight="bold"
+            >
               Sobre mí
             </Link>
             <Link fontSize="18px" fontWeight="bold">
@@ -46,7 +48,7 @@ const Header = () => {
               Contacto
             </Link>
           </Stack>
-        </Box>
+        </BlurCard>
       </Container>
     </Box>
   );
