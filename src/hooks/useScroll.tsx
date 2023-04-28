@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
-const handleScrollToAboutMe = (id: string) => {
+const scrollToId = (id: string) => {
   const aboutSection = document.getElementById(id);
   if (!aboutSection) return;
   scroll.scrollTo(aboutSection.offsetTop, {
@@ -28,7 +28,7 @@ function useScroll() {
       setScrolled100px(false);
     }
   }, [scrollY]);
-  return { scrolled100px, handleScrollToAboutMe };
+  return { scrolled100px, scrollToId };
 }
 
 export default useScroll;

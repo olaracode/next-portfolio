@@ -4,7 +4,7 @@ import { Container, BlurCard } from "./misc";
 import useScroll from "@/hooks/useScroll";
 
 const Header = () => {
-  const { scrolled100px, handleScrollToAboutMe } = useScroll();
+  const { scrolled100px, scrollToId } = useScroll();
 
   return (
     <Box
@@ -35,7 +35,7 @@ const Header = () => {
             direction={{ base: "column", md: "row" }}
           >
             <Link
-              onClick={() => handleScrollToAboutMe("about")}
+              onClick={() => scrollToId("about")}
               fontSize="18px"
               fontWeight="bold"
             >
