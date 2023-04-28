@@ -7,13 +7,22 @@ import {
   StackDivider,
   Flex,
   Heading,
+  Slide,
 } from "@chakra-ui/react";
 import useScroll from "@/hooks/useScroll";
 import { Container, BlurCard } from "./misc";
 const Navbar = () => {
   const { scrolled100px, handleScrollToAboutMe } = useScroll();
   return (
-    <Box position="fixed" top="0px" left="0px" w="100%" zIndex={"20"}>
+    <Box
+      position="fixed"
+      top="0px"
+      left="0px"
+      w="100%"
+      zIndex={"20"}
+      opacity={!scrolled100px ? "0" : "1"}
+      transition="opacity 0.3s ease-out"
+    >
       <BlurCard p={4}>
         <Container>
           <Flex alignItems="center" justifyContent="space-between">
