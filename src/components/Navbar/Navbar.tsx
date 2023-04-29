@@ -6,7 +6,7 @@ import { Container, BlurCard } from "../misc";
 import { StyledNavbar } from "./Navbar.styles";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Links from "../Links";
-
+import Logo from "../Logo";
 const variants = {
   slideIn: {
     transform: "translateY(0%)",
@@ -30,8 +30,12 @@ const Navbar = () => {
         <BlurCard p={4}>
           <Container>
             <Flex alignItems="center" justifyContent="space-between">
-              <Link fontSize="22px" onClick={() => scrollToId("top")}>
-                Octavio Lara
+              <Link
+                fontSize="22px"
+                onClick={() => scrollToId("top")}
+                alignItems="center"
+              >
+                <Logo color="white" height="30px" /> Octavio Lara
               </Link>
               <Box display={{ base: "none", md: "block" }}>
                 <Links variant="nav" />
@@ -60,6 +64,13 @@ const Navbar = () => {
               <Links variant="menu" />
             </BlurCard>
           </Container>
+          <Box
+            height="100vh"
+            width="100vh"
+            top="0"
+            position="absolute"
+            onClick={() => setIsOpen(false)}
+          />
         </Box>
       </StyledNavbar>
     </>
