@@ -1,7 +1,7 @@
 "use client";
 import { Heading, Link, Box, Stack, StackDivider } from "@chakra-ui/react";
-import { Container, BlurCard } from "./misc";
-import Links from "./Links";
+import { Container, BlurCard } from "../misc";
+import Links from "../Links";
 import useScroll from "@/hooks/useScroll";
 
 const Header = () => {
