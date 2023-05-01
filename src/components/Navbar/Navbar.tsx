@@ -25,53 +25,58 @@ const Navbar = () => {
 
   return (
     <>
-      <StyledNavbar opacity={!scrolled100px ? "0" : "1"}>
-        <BlurCard p={4}>
-          <Container>
-            <Flex alignItems="center" justifyContent="space-between">
-              <Link
-                fontSize="22px"
-                onClick={() => scrollToId("top")}
-                alignItems="center"
-              >
-                Octavio Lara
-              </Link>
-              <Box display={{ base: "none", md: "block" }}>
-                <Links variant="nav" />
-              </Box>
-              <Box display={{ base: "block", md: "none" }}>
-                <IconButton
-                  variant="ghost"
-                  aria-label="menu"
-                  onClick={handleToggle}
+      {scrolled100px && (
+        <StyledNavbar opacity={!scrolled100px ? "0" : "1"}>
+          <BlurCard p={4}>
+            <Container>
+              <Flex alignItems="center" justifyContent="space-between">
+                <Link
+                  fontSize="22px"
+                  onClick={() => scrollToId("top")}
+                  alignItems="center"
                 >
-                  <HamburgerIcon />
-                </IconButton>
-              </Box>
-            </Flex>
-          </Container>
-        </BlurCard>
-        <Box
-          position="relative"
-          w="100%"
-          zIndex="10"
-          display={{ base: "block", md: "none" }}
-          sx={isOpen ? variants.slideIn : variants.slideOut}
-        >
-          <Container display="flex" justifyContent="flex-end">
-            <BlurCard p={4} border="2px solid">
-              <Links variant="menu" />
-            </BlurCard>
-          </Container>
-          <Box
-            height="100vh"
-            width="100vh"
-            top="0"
-            position="absolute"
-            onClick={() => setIsOpen(false)}
-          />
-        </Box>
-      </StyledNavbar>
+                  Octavio Lara
+                </Link>
+                <Box display={{ base: "none", md: "block" }}>
+                  <Links variant="nav" />
+                </Box>
+                <Box display={{ base: "block", md: "none" }}>
+                  <IconButton
+                    variant="ghost"
+                    aria-label="menu"
+                    onClick={handleToggle}
+                  >
+                    <HamburgerIcon />
+                  </IconButton>
+                </Box>
+              </Flex>
+            </Container>
+          </BlurCard>
+          {isOpen && (
+            <Box
+              position="relative"
+              w="100%"
+              zIndex="10"
+              display={{ base: "block", md: "none" }}
+              sx={isOpen ? variants.slideIn : variants.slideOut}
+            >
+              <Container display="flex" justifyContent="flex-end">
+                <BlurCard p={4} border="2px solid">
+                  <Links variant="menu" />
+                </BlurCard>
+              </Container>
+              <Box
+                height="100vh"
+                width="100vh"
+                top="0"
+                zIndex={"10"}
+                position="absolute"
+                onClick={() => setIsOpen(false)}
+              />
+            </Box>
+          )}
+        </StyledNavbar>
+      )}
     </>
   );
 };

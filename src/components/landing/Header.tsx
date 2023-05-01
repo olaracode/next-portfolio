@@ -63,7 +63,7 @@ const Header = () => {
   const { content, handleChangeLanguage, currentLanguage } = useLang();
   return (
     <Box
-      zIndex={"12"}
+      zIndex={"30"}
       height="100vh"
       display="flex"
       justifyContent="center"
