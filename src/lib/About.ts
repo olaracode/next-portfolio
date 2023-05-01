@@ -10,6 +10,20 @@ Mi principal objetivo es desarrollar aplicaciones web que sean escalables, robus
 Actualmente me encuentro aprendiendo sobre el desarrollo de aplicaciones utilizando svelte y tambien estoy aprendiendo sobre el desarrollo de aplicaciones móviles utilizando flutter.
 `;
 
+export const engAbout = `
+# Octavio Lara Asapchi
+
+## Fullstack Developer
+
+I am a fullstack developer with experience in web application development using technologies such as *React.js and Next.js* for the frontend and *Flask and Django* for the backend.
+
+
+My main objective is to develop web applications that are scalable, robust, and meet quality standards. I like to actively participate in the development of the application, from defining the stack to creating a button.
+
+
+Currently, I am learning about application development using Svelte and also learning about mobile application development using Flutter.
+`;
+
 export const stack = [
   "React.js",
   "Next.js",

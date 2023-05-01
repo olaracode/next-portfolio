@@ -1,7 +1,8 @@
+"use client";
 import React from "react";
 import { Stack, StackDivider, Link, StackDirection } from "@chakra-ui/react";
 import useScroll from "@/hooks/useScroll";
-
+import useLang from "@/language/useLang";
 type variantsT = "responsive" | "nav" | "menu";
 const variants: { [key in variantsT]: StackDirection } = {
   responsive: { base: "column", md: "row" },
@@ -12,6 +13,7 @@ const variants: { [key in variantsT]: StackDirection } = {
 export type LinksVariantT = keyof typeof variants;
 
 const Links = ({ variant }: { variant: LinksVariantT }) => {
+  const { content } = useLang();
   const { scrollToId } = useScroll();
   return (
     <Stack
@@ -19,27 +21,16 @@ const Links = ({ variant }: { variant: LinksVariantT }) => {
       textAlign={"center"}
       direction={variants[variant]}
     >
-      <Link
-        onClick={() => scrollToId("about")}
-        fontSize="18px"
-        fontWeight="bold"
-      >
-        Sobre mí
-      </Link>
-      <Link
-        fontSize="18px"
-        fontWeight="bold"
-        onClick={() => scrollToId("experiences")}
-      >
-        Experiencia
-      </Link>
-      <Link
-        fontSize="18px"
-        fontWeight="bold"
-        onClick={() => scrollToId("contact")}
-      >
-        Contacto
-      </Link>
+      {content.links.map((link, index) => (
+        <Link
+          key={`link-${link}-${index}`}
+          onClick={() => scrollToId(link.href)}
+          fontSize="18px"
+          fontWeight="bold"
+        >
+          {link.content}
+        </Link>
+      ))}
     </Stack>
   );
 };

@@ -3,6 +3,7 @@ import React from "react";
 import { Heading, Divider, Link } from "@chakra-ui/react";
 import { Container, BlurCard, Article } from "../misc";
 import NextLink from "next/link";
+import useLang from "@/language/useLang";
 const contacts = [
   {
     title: "Email",
@@ -37,9 +38,10 @@ const animation = {
   },
 };
 const Contact = () => {
+  const { content } = useLang();
   return (
     <Container position="relative" mb={10} id="contact">
-      <Heading>Contacto</Heading>
+      <Heading>{content.sections?.contact}</Heading>
       <BlurCard
         sx={{
           ...animation,

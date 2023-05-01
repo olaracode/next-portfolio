@@ -100,3 +100,94 @@ export const experiences: ExperienceI[] = [
     ],
   },
 ];
+
+export const experiencesEng: ExperienceI[] = [
+  {
+    title: "Teacher Assistant",
+    company: "4Geeks Academy",
+    location: "@Remote",
+    startDate: "16/01/2022",
+    endDate: "10/01/2022",
+    description:
+      "Assistant to the main professor in the fullstack course at 4geeks academy, correcting assignments, providing mentorship, and helping students to solve their doubts.",
+    tags: [
+      "React.js",
+      "Javascript",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "Python",
+      "Flask",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company: "Yoifirst",
+    location: "@Remote",
+    startDate: "12/03/2022",
+    endDate: "06/04/2023",
+    description:
+      "Frontend developer in the Yoifirst team, responsible for creating and maintaining 5 company pages, using next.js, react.js, typescript, Chakra-UI, Material-UI, html and css, Redux.",
+    tags: [
+      "React.js",
+      "Next.js",
+      "Material-UI",
+      "HTML",
+      "CSS",
+      "Redux",
+      "Chakra-UI",
+    ],
+  },
+  {
+    title: "Fullstack Developer",
+    company: "TechneStudioIT",
+    location: "@Remote",
+    startDate: "06/04/2022",
+    endDate: "24/08/2022",
+    description:
+      "Fullstack developer in the TechneStudioIT team, responsible for creating a military aviation student evaluation application using Jquery, Bootstrap, html and css, and backend technologies such as Django, Python, and PostgreSQL.",
+    tags: [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Jquery",
+    ],
+  },
+  {
+    title: "Lead Teacher",
+    company: "4Geeks Academy",
+    location: "@Remote",
+    startDate: "16/01/2023",
+    description:
+      "Main professor responsible for teaching the fullstack course at 4Geeks Academy, correcting homework, providing mentorship, and helping students to resolve their doubts",
+    tags: [
+      "React.js",
+      "Javascript",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "Python",
+      "Flask",
+    ],
+  },
+  {
+    title: "Fullstack Developer",
+    company: "TechneStudioIT",
+    location: "@Remote",
+    startDate: "03/04/2023",
+    description:
+      "Part of a frontend development team responsible for developing a payment services management application using Next.js, Chakra-UI, Recoil, and axios",
+    tags: [
+      "React.js",
+      "Next.js",
+      "Chakra-UI",
+      "HTML",
+      "CSS",
+      "Recoil",
+      "Axios",
+    ],
+  },
+];

@@ -3,6 +3,7 @@ import { SimpleGrid, GridItem, Heading, Divider } from "@chakra-ui/react";
 import { Container, Article, BlurCard } from "../misc";
 import TechStack from "../TechStack";
 import { experiences } from "@/lib/experiences";
+import useLang from "@/language/useLang";
 
 const animation = {
   "@keyframes glow": {
@@ -21,12 +22,13 @@ const animation = {
   },
 };
 const Experiences = () => {
+  const { content } = useLang();
   return (
     <>
       <Container mt={40} mb={10}>
-        <Heading id="experiences">Experiencia</Heading>
+        <Heading id="experiences">{content.sections?.experience}</Heading>
         <SimpleGrid columns={{ base: 1, lg: 2, "2xl": 3 }} spacing={5}>
-          {experiences.map((experience, index) => (
+          {content.experiences.map((experience, index) => (
             <GridItem
               key={`experience-${experience.title}-${index}`}
               height="100%"
@@ -58,8 +60,12 @@ const Experiences = () => {
 
                   <p>{experience.description}</p>
                   <span>
-                    Del {experience.startDate}{" "}
-                    {experience.endDate && <>a {experience.endDate}</>}
+                    {content.from} {experience.startDate}{" "}
+                    {experience.endDate && (
+                      <>
+                        {content.to} {experience.endDate}
+                      </>
+                    )}
                   </span>
                 </Article>
                 <Divider my={2} />
