@@ -17,8 +17,10 @@ export default function RootLayout({
         <div id="top" />
 
         <ChakraProvider>
-          <LanguageProvider>{children}</LanguageProvider>
-          <GoTop />
+          <LanguageProvider>
+            {children}
+            <GoTop />
+          </LanguageProvider>
         </ChakraProvider>
       </body>
     </html>
