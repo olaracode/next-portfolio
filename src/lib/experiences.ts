@@ -12,6 +12,44 @@ export interface ExperienceI {
 
 export const experiences: ExperienceI[] = [
   {
+    title: "Subject Matter Expert",
+    company: "TripleTen",
+    location: "@Remote",
+    startDate: "01/2026",
+    description:
+      "Experto en la materia colaborando en el desarrollo del curriculum de Ingeniería de Software, creación de APIs REST para uso educativo y elaboración de guías de revisión de proyectos.",
+    tags: ["REST APIs", "Curriculum Design", "Node.js"],
+  },
+  {
+    title: "Lead Programming Instructor",
+    company: "TripleTen",
+    location: "@Remote",
+    startDate: "10/2025",
+    description:
+      "Instructor líder responsable de la mejora y actualización del curriculum, supervisión del equipo de instructores y liderazgo de cohortes completas desde el inicio hasta la graduación.",
+    tags: ["React", "Node.js", "Mentorship", "Code Review"],
+  },
+  {
+    title: "Programming Instructor",
+    company: "TripleTen",
+    location: "@Remote",
+    startDate: "06/2025",
+    endDate: "10/2025",
+    description:
+      "Instructor de programación encargado de impartir clases en vivo, corregir proyectos, realizar revisiones de código y contribuir a la estructura del contenido académico en el programa de Software Engineering.",
+    tags: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express"],
+  },
+  {
+    title: "Programming Tutor",
+    company: "TripleTen",
+    location: "@Remote",
+    startDate: "07/2024",
+    endDate: "06/2025",
+    description:
+      "Tutor de programación enfocado en resolución de bugs, explicación de conceptos complejos y guía en la implementación de proyectos. Acompañamiento técnico continuo para fomentar la confianza y autonomía de los estudiantes.",
+    tags: ["JavaScript", "React", "Node.js", "MongoDB"],
+  },
+  {
     title: "Teacher Assistant",
     company: "4Geeks Academy",
     location: "@Remote",
@@ -61,15 +99,27 @@ export const experiences: ExperienceI[] = [
       "Programador principal del frontend en una aplicación de gestión de pagos de servicios. Responsable del desarrollo de páginas corporativas, dashboard de usuario, sistema de billetera digital, pagos de servicios y visualización de transacciones.",
     tags: ["Next.js", "React.js", "Chakra-UI", "Recoil", "Axios"],
   },
+];
+
+
+export const experiencesEng: ExperienceI[] = [
   {
-    title: "Programming Tutor",
+    title: "Subject Matter Expert",
     company: "TripleTen",
     location: "@Remote",
-    startDate: "07/2024",
-    endDate: "06/2025",
+    startDate: "01/2026",
     description:
-      "Tutor de programación enfocado en resolución de bugs, explicación de conceptos complejos y guía en la implementación de proyectos. Acompañamiento técnico continuo para fomentar la confianza y autonomía de los estudiantes.",
-    tags: ["JavaScript", "React", "Node.js", "MongoDB"],
+      "Subject Matter Expert collaborating on Software Engineering curriculum development, building REST APIs for educational use, and creating project review guidelines.",
+    tags: ["REST APIs", "Curriculum Design", "Node.js"],
+  },
+  {
+    title: "Lead Programming Instructor",
+    company: "TripleTen",
+    location: "@Remote",
+    startDate: "10/2025",
+    description:
+      "Lead instructor responsible for curriculum improvements, mentoring instructors, and leading full student cohorts from onboarding to graduation.",
+    tags: ["React", "Node.js", "Mentorship", "Code Review"],
   },
   {
     title: "Programming Instructor",
@@ -78,31 +128,19 @@ export const experiences: ExperienceI[] = [
     startDate: "06/2025",
     endDate: "10/2025",
     description:
-      "Instructor de programación encargado de impartir clases en vivo, corregir proyectos, realizar revisiones de código y contribuir a la estructura del contenido académico en el programa de Software Engineering.",
+      "Programming instructor delivering live classes, project reviews, and code reviews while contributing to the structure and content of the Software Engineering program.",
     tags: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express"],
   },
   {
-    title: "Lead Programming Instructor",
+    title: "Programming Tutor",
     company: "TripleTen",
     location: "@Remote",
-    startDate: "10/2025",
+    startDate: "07/2024",
+    endDate: "06/2025",
     description:
-      "Instructor líder responsable de la mejora y actualización del curriculum, supervisión del equipo de instructores y liderazgo de cohortes completas desde el inicio hasta la graduación.",
-    tags: ["React", "Node.js", "Mentorship", "Code Review"],
+      "Provided technical support to students by debugging issues, explaining complex web development concepts, and guiding project implementations to foster confidence and autonomy.",
+    tags: ["JavaScript", "React", "Node.js", "MongoDB"],
   },
-  {
-    title: "Subject Matter Expert",
-    company: "TripleTen",
-    location: "@Remote",
-    startDate: "01/2026",
-    description:
-      "Experto en la materia colaborando en el desarrollo del curriculum de Ingeniería de Software, creación de APIs REST para uso educativo y elaboración de guías de revisión de proyectos.",
-    tags: ["REST APIs", "Curriculum Design", "Node.js"],
-  },
-];
-
-
-export const experiencesEng: ExperienceI[] = [
   {
     title: "Teacher Assistant",
     company: "4Geeks Academy",
@@ -153,43 +191,6 @@ export const experiencesEng: ExperienceI[] = [
       "Lead frontend developer for a service payments management application. Built corporate pages, user dashboards, digital wallet top-ups, service payments, and transaction data tables.",
     tags: ["Next.js", "React.js", "Chakra-UI", "Recoil", "Axios"],
   },
-  {
-    title: "Programming Tutor",
-    company: "TripleTen",
-    location: "@Remote",
-    startDate: "07/2024",
-    endDate: "06/2025",
-    description:
-      "Provided technical support to students by debugging issues, explaining complex web development concepts, and guiding project implementations to foster confidence and autonomy.",
-    tags: ["JavaScript", "React", "Node.js", "MongoDB"],
-  },
-  {
-    title: "Programming Instructor",
-    company: "TripleTen",
-    location: "@Remote",
-    startDate: "06/2025",
-    endDate: "10/2025",
-    description:
-      "Programming instructor delivering live classes, project reviews, and code reviews while contributing to the structure and content of the Software Engineering program.",
-    tags: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express"],
-  },
-  {
-    title: "Lead Programming Instructor",
-    company: "TripleTen",
-    location: "@Remote",
-    startDate: "10/2025",
-    description:
-      "Lead instructor responsible for curriculum improvements, mentoring instructors, and leading full student cohorts from onboarding to graduation.",
-    tags: ["React", "Node.js", "Mentorship", "Code Review"],
-  },
-  {
-    title: "Subject Matter Expert",
-    company: "TripleTen",
-    location: "@Remote",
-    startDate: "01/2026",
-    description:
-      "Subject Matter Expert collaborating on Software Engineering curriculum development, building REST APIs for educational use, and creating project review guidelines.",
-    tags: ["REST APIs", "Curriculum Design", "Node.js"],
-  },
+
 ];
 
